@@ -1,23 +1,34 @@
 <div id="multiItemCarousel" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">  <div class="row">
-        <div *ngFor="let item of visibleItems" class="col-md-3"> <div class="card">
+  <div class="carousel-inner" #carouselInner>
+    <div class="carousel-item active">
+      <div class="row">
+        <div *ngFor="let item of visibleItems" class="col-md-3">
+          <div class="card">
             <img [src]="item.image" class="card-img-top" alt="{{ item.title }}">
             <div class="card-body">
-              <h5 class="card-title">{{ item.title }}</h5>
-              <p class="card-text">{{ item.description }}</p>
+              <div class="same-row">
+                <h5 class="card-title">{{ item.title }}</h5>
+                <app-rating [rating]="item.rating" [userCount]="item.userCount"/>
+              </div>
+              <p class="card-description mb-3 mt-2">{{ item.description }}</p>
+              <div class="price-layout border-bottom pb-3">
+                <span class="strike-price">{{item.oldPrice}}</span>
+                <span class="price mx-2">{{item.newPrice}}</span>
+                <span class="offer">{{item.offer}}Off</span>
+              </div>
+              <div class="other-info d-flex mt-2">
+                <div><i class="bi bi-truck"></i> Free shipping</div>
+                <div class="ms-4"><i class="bi bi-handbag-fill"></i> <span class="shop-seller ms-2">Shop this seller</span></div>
+              </div>
+              <div class="purchase-div mt-3">
+                <div class="btn btn-primary btn-lg">View Product</div>
+                <div class="rounded-border mx-5"><i class="bi bi-cart"></i></div>
+                <div class="rounded-border"><i class="bi bi-heart"></i></div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <button class="carousel-control-prev" type="button" (click)="prev()">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" (click)="next()">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
 </div>

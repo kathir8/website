@@ -1,15 +1,93 @@
 /* multi-item-carousel.component.css */
 .carousel-inner .carousel-item.active,
 .carousel-inner .carousel-item:not(.active) {
-    display: block; /* Ensure items are displayed */
+    display: block;
 }
 
-/* Optional: Add some spacing between cards */
 .card {
-  margin: 0 10px; /* Adjust as needed */
+    margin: 0 10px;
+    border-radius: 15px;
+    .card-img-top{
+        padding: 6px;
+    }
 }
 
+/* Hide the default Bootstrap carousel controls */
 .carousel-control-prev,
 .carousel-control-next {
-    width: auto; /* Adjust width if needed */
+    display: none;
+}
+
+/* Make carousel draggable */
+.carousel-inner {
+    cursor: grab;
+    /* Use a grab cursor */
+}
+
+.carousel-inner.dragging {
+    cursor: grabbing;
+    /* Use a grabbing cursor while dragging */
+}
+
+/* Optional: Add smooth scrolling */
+.carousel-inner {
+    scroll-behavior: smooth;
+}
+
+
+.card {
+    &-title {
+        font-weight: 700;
+        font-size: 20px;
+        color: #344450;
+    }
+
+    &-description {
+        font-weight: 400;
+        font-size: 13px;
+        color: #687787;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .price-layout {
+        font-weight: 700;
+        font-size: 18px;
+
+        .strike-price {
+            text-decoration: line-through;
+            color: var(--text-grey);
+        }
+
+        .price {
+            color: #344450;
+        }
+
+        .offer {
+            color: #007DBC;
+        }
+    }
+
+    .other-info{
+        color: var(--text-grey);
+        font-size: 16px;
+        .shop-seller{
+            color: #2B8BFF;
+        }
+    }
+    .purchase-div{
+        display: flex;
+        align-items: center;
+        .rounded-border{
+            width: 50px;
+            height: 50px;
+            padding-top: 12px;
+            text-align: center;
+            border-radius: 100px;
+            border: 0.05px solid #3232470f;
+            box-shadow: 0px 3px 10px 0px #32324754;
+        }
+    }
 }

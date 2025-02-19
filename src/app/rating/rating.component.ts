@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-rating',
@@ -8,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './rating.component.scss'
 })
 export class RatingComponent {
-
+  @Input()rating:string = '';
+  @Input()userCount:string = '';
 }
