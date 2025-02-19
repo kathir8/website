@@ -1,0 +1,14 @@
+.swiper-container {
+    width: 80%; // Adjust as needed
+    margin: 20px auto;
+  
+    .slide {
+      text-align: center;
+      padding: 20px;
+  
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }

@@ -1,0 +1,8 @@
+<div class="section-container bg-white">
+  <div class="section-heading">Top Categories</div>
+  <ul class="nav">
+    <li *ngFor="let tab of tabs" [class.active]="tab === activeTab" (click)="setActiveTab(tab)">
+      {{ tab }}
+    </li>
+  </ul>
+</div>
