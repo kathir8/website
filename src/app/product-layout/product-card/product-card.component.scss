@@ -1,14 +1,15 @@
-.swiper-container {
-    width: 80%; // Adjust as needed
-    margin: 20px auto;
-  
-    .slide {
-      text-align: center;
-      padding: 20px;
-  
-      img {
-        max-width: 100%;
-        height: auto;
-      }
-    }
-  }
+/* multi-item-carousel.component.css */
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item:not(.active) {
+    display: block; /* Ensure items are displayed */
+}
+
+/* Optional: Add some spacing between cards */
+.card {
+  margin: 0 10px; /* Adjust as needed */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: auto; /* Adjust width if needed */
+}

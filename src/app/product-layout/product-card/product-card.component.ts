@@ -1,6 +1,5 @@
 import { CommonModule } from '@angular/common';
 import { Component, ElementRef, ViewChild } from '@angular/core';
-// import { SwiperModule } from 'swiper/angular';
 
 @Component({
   selector: 'app-product-card',
@@ -10,15 +9,36 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
   styleUrl: './product-card.component.scss'
 })
 export class ProductCardComponent {
-  @ViewChild('carousel') carousel!: ElementRef;
-
-  items = [
-    { image: 'images/Laptop.png', title: 'Item 1', description: 'Description 1' },
-    { image: 'images/Laptop.png', title: 'Item 2', description: 'Description 2' },
-    { image: 'images/Laptop.png', title: 'Item 3', description: 'Description 3' },
-    { image: 'images/Laptop.png', title: 'Item 4', description: 'Description 4' },
-    { image: 'images/Laptop.png', title: 'Item 5', description: 'Description 5' },
-    { image: 'images/Laptop.png', title: 'Item 6', description: 'Description 6' },
+  carouselItems: any[] = [
+    { id: 1, image: 'images/Laptop.png', title: 'Item 1', description: 'Description for item 1' },
+    { id: 2, image: 'images/Laptop.png', title: 'Item 2', description: 'Description for item 2' },
+    { id: 3, image: 'images/Laptop.png', title: 'Item 3', description: 'Description for item 3' },
+    { id: 4, image: 'images/Laptop.png', title: 'Item 4', description: 'Description for item 4' },
+    { id: 5, image: 'images/Laptop.png', title: 'Item 5', description: 'Description for item 5' },
+    { id: 6, image: 'images/Laptop.png', title: 'Item 6', description: 'Description for item 6' },
+    // ... more items
   ];
+
+  visibleItems: any[] = [];
+  currentIndex = 0;
+  itemsPerPage = 3; // Number of items to display at a time
+
+  ngOnInit() {
+    this.updateVisibleItems();
+  }
+
+  next() {
+    this.currentIndex = Math.min(this.currentIndex + 1, this.carouselItems.length - this.itemsPerPage);
+    this.updateVisibleItems();
+  }
+
+  prev() {
+    this.currentIndex = Math.max(this.currentIndex - 1, 0);
+    this.updateVisibleItems();
+  }
+
+  updateVisibleItems() {
+    this.visibleItems = this.carouselItems.slice(this.currentIndex, this.currentIndex + this.itemsPerPage);
+  }
 
 }
