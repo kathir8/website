@@ -1,29 +1,23 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      <div id="multiItemCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">  <div class="row">
-              <div *ngFor="let item of visibleItems" class="col-md-4"> <div class="card">
-                  <img [src]="item.image" class="card-img-top" alt="{{ item.title }}">
-                  <div class="card-body">
-                    <h5 class="card-title">{{ item.title }}</h5>
-                    <p class="card-text">{{ item.description }}</p>
-                  </div>
-                </div>
-              </div>
+<div id="multiItemCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">  <div class="row">
+        <div *ngFor="let item of visibleItems" class="col-md-3"> <div class="card">
+            <img [src]="item.image" class="card-img-top" alt="{{ item.title }}">
+            <div class="card-body">
+              <h5 class="card-title">{{ item.title }}</h5>
+              <p class="card-text">{{ item.description }}</p>
             </div>
           </div>
         </div>
-        <button class="carousel-control-prev" type="button" (click)="prev()">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" (click)="next()">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
       </div>
     </div>
   </div>
+  <button class="carousel-control-prev" type="button" (click)="prev()">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" (click)="next()">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
 </div>

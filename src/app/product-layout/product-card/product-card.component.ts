@@ -16,12 +16,13 @@ export class ProductCardComponent {
     { id: 4, image: 'images/Laptop.png', title: 'Item 4', description: 'Description for item 4' },
     { id: 5, image: 'images/Laptop.png', title: 'Item 5', description: 'Description for item 5' },
     { id: 6, image: 'images/Laptop.png', title: 'Item 6', description: 'Description for item 6' },
-    // ... more items
+    { id: 7, image: 'images/Laptop.png', title: 'Item 7', description: 'Description for item 7' },
+    { id: 8, image: 'images/Laptop.png', title: 'Item 8', description: 'Description for item 8' },
   ];
 
   visibleItems: any[] = [];
   currentIndex = 0;
-  itemsPerPage = 3; // Number of items to display at a time
+  itemsPerPage = 4; 
 
   ngOnInit() {
     this.updateVisibleItems();
