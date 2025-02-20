@@ -2,7 +2,8 @@
     --primary-color: #012B49;
     --secondary-color: #E3F8FF;
     --font-family: 'Arial', sans-serif;
-    --text-grey:#8C96A2
+    --text-grey:#8C96A2;
+    --card-radius:15px;
   }
 
 .btn-primary {
@@ -34,10 +35,9 @@
     display: flex;
 }
 
-.d-none{
-    display: none;
+.text-grey{
+    color: var(--text-grey);
 }
-
 
 
 .section-container {

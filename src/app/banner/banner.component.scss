@@ -1,17 +1,8 @@
-.fullscreen-image {
-    width: calc(100vw - 20px);
-    height: 780px;
-    object-fit: cover;
-}
-
 .carousel {
-    max-width: 800px;
-    margin: auto;
-  
     img {
-      border-radius: 10px;
+      width: calc(100vw - 20px);
+      height: 780px;
       object-fit: cover;
-      height: 400px;
     }
   
     .carousel-control-prev,
