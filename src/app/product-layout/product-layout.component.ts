@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { MultiCarouselComponent } from "../multi-carousel/multi-carousel.component";
+import { ProductAllDetails, ProductDetails } from '../model/ecommerce';
 
 @Component({
   selector: 'app-product-layout',
@@ -11,4 +12,5 @@ import { MultiCarouselComponent } from "../multi-carousel/multi-carousel.compone
 export class ProductLayoutComponent {
   @Input() heading:string="";
   @Input() isTopBrandSection:boolean=false;
+  @Input() ProductsList:(ProductAllDetails | ProductDetails)[]=[];
 }

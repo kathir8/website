@@ -1,10 +1,10 @@
-import { CommonModule } from '@angular/common';
+import { NgFor, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-categories',
   standalone: true,
-  imports: [CommonModule],
+  imports: [NgIf, NgFor],
   templateUrl: './categories.component.html',
   styleUrl: './categories.component.scss'
 })

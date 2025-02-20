@@ -1,6 +1,6 @@
 <div class="section-container bg-white">
     <div class="section-heading">{{heading}}</div>
-    <div>__Everyday listed new products from our trusted seller__</div>
-    <div class="btn btn-primary btn-lg me-5">Show all products</div>
+    <div class="d-none d-sm-block">__Everyday listed new products from our trusted seller__</div>
+    <div class="btn btn-primary responsive-btn me-3 me-md-2 me-lg-5">Show all products</div>
 </div>
-<app-multi-carousel [isTopBrandSection]="isTopBrandSection"/>
+<app-multi-carousel [isTopBrandSection]="isTopBrandSection" [ProductsList]="ProductsList" />

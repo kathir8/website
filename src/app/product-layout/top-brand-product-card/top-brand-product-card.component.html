@@ -1,32 +1,16 @@
-top
 <div *ngFor="let group of getProductGroups(); let i = index" class="carousel-item" [class.active]="i === 0">
-    <div class="row">
-      <div *ngFor="let product of group" class="col-md-3">
-        <div class="card">
-          <img [src]="product.image" class="card-img" alt="{{ product.title }}">
-          <div class="card-body">
-            <div class="same-row">
-              <h5 class="card-title">{{ product.title }}</h5>
-              <app-rating [rating]="product.rating" [userCount]="product.userCount"></app-rating>
-            </div>
-            <p class="card-description mb-3 mt-2">{{ product.description }}</p>
-            <div class="price-layout border-bottom pb-3">
-              <span class="strike-price">{{product.oldPrice}}</span>
-              <span class="price mx-2">{{product.newPrice}}</span>
-              <span class="offer">{{product.offer}} Off</span>
-            </div>
-            <div class="other-info d-flex mt-2">
-              <div><i class="bi bi-truck"></i> Free shipping</div>
-              <div class="ms-4"><i class="bi bi-handbag-fill"></i> <span class="shop-seller ms-2">Shop this
-                  seller</span></div>
-            </div>
-            <div class="purchase-div mt-3">
-              <div class="btn btn-primary btn-lg">View Product</div>
-              <div class="rounded-border mx-5"><i class="bi bi-cart"></i></div>
-              <div class="rounded-border"><i class="bi bi-heart"></i></div>
-            </div>
+  <div class="row">
+    <div *ngFor="let product of group" class="col-md-3">
+      <div class="card">
+        <img [src]="product.image" class="card-img" alt="{{ product.title }}">
+        <div class="card-body">
+          <h5 class="card-title">{{ product.title }} <span class="offer">{{product.offer}} Off</span></h5>
+          <div class="same-row">
+            <p class="mb-0">View More</p>
+            <div class="badge bg-secondary text-dark">{{product.userCount}}</div>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>

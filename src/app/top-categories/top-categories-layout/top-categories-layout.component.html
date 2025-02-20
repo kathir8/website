@@ -1,5 +1,5 @@
 <div class="row" *ngFor="let groups of getProductGroups()">
-    <div class="col-md-6" *ngFor="let group of [groups.slice(0, 4), groups.slice(4, 8)]">
+    <div class="col-md-12 col-lg-6" *ngFor="let group of [groups.slice(0, 4), groups.slice(4, 8)]">
         <div class="row">
             <div class="col-md-6" *ngFor="let product of group.slice(0, 2); let i = index">
                 <div class="product-card">
@@ -19,12 +19,13 @@
                             <div class="overlay">
                                 <div class="content" [ngClass]="smallProduct.position">
                                     <h5>{{ smallProduct.brand }}</h5>
-                                    <p class="view-more" [ngClass]="{'text-end': smallProduct.position !== 'center'}">View More</p>
+                                    <p class="view-more" [ngClass]="{'text-end': smallProduct.position !== 'center'}">
+                                        View More</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div> 
+                </div>
             </div>
         </div>
     </div>

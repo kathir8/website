@@ -13,7 +13,7 @@ export class ProductCardComponent {
 
   @Input() carouselItems: any[] = [];
   getProductGroups(): any[] {
-    let groups = [];
+    const groups = [];
     for (let i = 0; i < this.carouselItems.length; i += 4) {
       groups.push(this.carouselItems.slice(i, i + 4));
     }

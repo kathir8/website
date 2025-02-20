@@ -1,6 +1,19 @@
-main{
+main {
     background-color: var(--secondary-color);
 }
-section{
+
+section {
     padding: 2em 6em;
+}
+
+@media (min-width: 500px) {
+    section {
+        padding: 1em;
+    }
+}
+
+@media (max-width: 500px) {
+    section {
+        padding: 0.5em;
+    }
 }

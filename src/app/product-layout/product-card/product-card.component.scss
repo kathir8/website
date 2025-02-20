@@ -1,46 +1,10 @@
-// /* multi-item-carousel.component.css */
-// .carousel-inner .carousel-item.active,
-// .carousel-inner .carousel-item:not(.active) {
-//     display: block;
-// }
-
-// .card {
-//     margin: 0 10px;
-//     border-radius: var(--card-radius);
-//     .card-img-top{
-//         padding: 6px;
-//     }
-// }
-
-// /* Hide the default Bootstrap carousel controls */
-// .carousel-control-prev,
-// .carousel-control-next {
-//     display: none;
-// }
-
-// /* Make carousel draggable */
-// .carousel-inner {
-//     cursor: grab;
-//     /* Use a grab cursor */
-// }
-
-// .carousel-inner.dragging {
-//     cursor: grabbing;
-//     /* Use a grabbing cursor while dragging */
-// }
-
-// /* Optional: Add smooth scrolling */
-// .carousel-inner {
-//     scroll-behavior: smooth;
-// }
-
-
 .card {
-    &-img{
+    &-img {
         width: 400px;
         height: 243px;
         object-fit: cover;
     }
+
     &-title {
         font-weight: 700;
         font-size: 20px;
@@ -75,17 +39,20 @@
         }
     }
 
-    .other-info{
+    .other-info {
         color: var(--text-grey);
         font-size: 16px;
-        .shop-seller{
+
+        .shop-seller {
             color: #2B8BFF;
         }
     }
-    .purchase-div{
+
+    .purchase-div {
         display: flex;
         align-items: center;
-        .rounded-border{
+
+        .rounded-border {
             width: 45px;
             height: 45px;
             padding-top: 10px;

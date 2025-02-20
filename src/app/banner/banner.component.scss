@@ -1,13 +1,28 @@
 .carousel {
-    img {
-      width: calc(100vw - 20px);
-      height: 780px;
-      object-fit: cover;
-    }
-  
-    .carousel-control-prev,
-    .carousel-control-next {
-      filter: invert(100%);
+  img {
+    width: calc(100vw - 20px);
+    height: 780px;
+    object-fit: cover;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    filter: invert(100%);
+  }
+}
+
+
+@media (min-width: 500px) {
+  .carousel {
+    img{
+      height: 500px;
     }
   }
-  
+}
+@media (max-width: 500px) {
+  .carousel {
+    img{
+      height: 250px;
+    }
+  }
+}

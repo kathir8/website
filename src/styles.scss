@@ -23,6 +23,12 @@
 .text-secondary{
     color: var(--secondary-color) !important;
 }
+.bg-primary{
+    background-color: var(--primary-color) !important;
+}
+.bg-secondary{
+    background-color: var(--secondary-color) !important;
+}
 .form-control:focus{
     border-color: transparent;
     box-shadow: none;
@@ -63,3 +69,45 @@
     }
   }
   
+
+  @media (max-width: 850px) {
+    .section-container {
+      margin: 0 0 1em 0;
+      height: 50px;
+      font-size: 16px;
+  
+      .section-heading {
+        width: 190px;
+      }
+  
+      .nav {
+        margin-right: auto;
+  
+        li {
+          margin: 0 1rem;
+          padding: 0px;
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .section-container {
+      margin: 0 0 0.5em 0;
+      height: 30px;
+      font-size: 10px;
+  
+      .section-heading {
+        width: 100px;
+      }
+  
+      .nav {
+        margin-right: auto;
+  
+        li {
+          margin: 0 1rem;
+          padding: 0px;
+        }
+      }
+    }
+  }
