@@ -3,7 +3,8 @@
     <app-banner />
     <section>
         <app-top-categories />
-        <app-product-layout [heading]="'Trending Products'" />
+        <app-product-layout [heading]="'Trending Products'" [isTopBrandSection]="false"/>
+        <app-product-layout [heading]="'offers on Top Brands'" [isTopBrandSection]="true" />
         <app-product-layout [heading]="'Best Selling items'" />
         <app-product-layout [heading]="'Browsing History'" />
     </section>

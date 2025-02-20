@@ -1,17 +1,16 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
-import { RatingComponent } from "../../rating/rating.component";
+import { RatingComponent } from '../../rating/rating.component';
 
 @Component({
-  selector: 'app-product-card',
+  selector: 'app-top-brand-product-card',
   standalone: true,
   imports: [CommonModule, RatingComponent],
-  templateUrl: './product-card.component.html',
-  styleUrl: './product-card.component.scss'
+  templateUrl: './top-brand-product-card.component.html',
+  styleUrl: './top-brand-product-card.component.scss'
 })
-export class ProductCardComponent {
-
-  @Input() carouselItems: any[] = [];
+export class TopBrandProductCardComponent {
+  @Input() carouselItems: any = [];
   getProductGroups(): any[] {
     let groups = [];
     for (let i = 0; i < this.carouselItems.length; i += 4) {

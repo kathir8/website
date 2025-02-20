@@ -1,41 +1,46 @@
-/* multi-item-carousel.component.css */
-.carousel-inner .carousel-item.active,
-.carousel-inner .carousel-item:not(.active) {
-    display: block;
-}
+// /* multi-item-carousel.component.css */
+// .carousel-inner .carousel-item.active,
+// .carousel-inner .carousel-item:not(.active) {
+//     display: block;
+// }
+
+// .card {
+//     margin: 0 10px;
+//     border-radius: var(--card-radius);
+//     .card-img-top{
+//         padding: 6px;
+//     }
+// }
+
+// /* Hide the default Bootstrap carousel controls */
+// .carousel-control-prev,
+// .carousel-control-next {
+//     display: none;
+// }
+
+// /* Make carousel draggable */
+// .carousel-inner {
+//     cursor: grab;
+//     /* Use a grab cursor */
+// }
+
+// .carousel-inner.dragging {
+//     cursor: grabbing;
+//     /* Use a grabbing cursor while dragging */
+// }
+
+// /* Optional: Add smooth scrolling */
+// .carousel-inner {
+//     scroll-behavior: smooth;
+// }
+
 
 .card {
-    margin: 0 10px;
-    border-radius: var(--card-radius);
-    .card-img-top{
-        padding: 6px;
+    &-img{
+        width: 400px;
+        height: 243px;
+        object-fit: cover;
     }
-}
-
-/* Hide the default Bootstrap carousel controls */
-.carousel-control-prev,
-.carousel-control-next {
-    display: none;
-}
-
-/* Make carousel draggable */
-.carousel-inner {
-    cursor: grab;
-    /* Use a grab cursor */
-}
-
-.carousel-inner.dragging {
-    cursor: grabbing;
-    /* Use a grabbing cursor while dragging */
-}
-
-/* Optional: Add smooth scrolling */
-.carousel-inner {
-    scroll-behavior: smooth;
-}
-
-
-.card {
     &-title {
         font-weight: 700;
         font-size: 20px;

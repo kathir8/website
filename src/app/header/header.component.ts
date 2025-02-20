@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { TopbarComponent } from "../topbar/topbar.component";
 import { CategoriesComponent } from "../categories/categories.component";
+import { TopbarComponent } from './topbar/topbar.component';
 
 @Component({
   selector: 'app-header',
