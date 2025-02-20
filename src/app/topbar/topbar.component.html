@@ -1,6 +1,6 @@
-<nav class="navbar" *ngIf="copy">
+<nav class="navbar">
     <button class="navbar-toggler" type="button">
-        <img src="images/menu-icon.png" />
+        <img src="images/header/menu-icon.png" />
     </button>
   
     <div class="search-bar">
@@ -17,21 +17,11 @@
             <input type="text" class="form-control search-text" placeholder="Search by brands, category, items, etc.,">
             <div class="input-group-append">
                 <button class="btn search-btn">
-                    <img src="images/Vector.png" /> |
-                    <img src="images/search.png" />
+                    <img src="images/header/Vector.png" /> |
+                    <img src="images/header/search.png" />
                   </button>
             </div>
         </div>
-    </div>
-    <div class="search-bar" *ngIf="false">
-      <div class="input-group">
-        <button class="btn category-btn dropdown-toggle">Select Category</button>
-        <input type="text" class="form-control search-input" placeholder="Search by brands, category, items, etc.,">
-        <button class="btn search-btn">
-          <i class="bi bi-qr-code-scan"></i> |
-          <i class="bi bi-search"></i>
-        </button>
-      </div>
     </div>
   
     <div class="auth-buttons">
@@ -39,35 +29,3 @@
       <button class="btn login-btn">Login</button>
     </div>
   </nav>
-  
-
-
-<div class="same-row" *ngIf="!copy">
-    <img src="images/menu-icon.png" />
-      
-    <div class="search-layout">
-        <div class="input-group text-center">
-            <div class="input-group-prepend">
-                <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Select Category</button>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Fashion</a>
-                    <a class="dropdown-item" href="#">Beauty</a>
-                    <a class="dropdown-item" href="#">Utensils</a>
-                    <a class="dropdown-item" href="#">Accessories</a>
-                </div>
-            </div>
-            <input type="text" class="form-control" placeholder="Search by brands, category, items, etc.,">
-            <div class="input-group-append">
-                <button class="btn btn-primary">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-        </div>
-    </div>
-    <div class="button-layout">
-        <button class="btn btn-primary">Register</button>
-        <button class="btn btn-primary">Login</button>
-    </div>
-</div>

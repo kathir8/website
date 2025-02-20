@@ -1,152 +1,7 @@
-<div class="top-categories-layout d-none">
-    <div class="row">
-        <div class="col-md-6">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="product-card">
-                        <img [src]="products[0].image" [alt]="products[0].name" class="product-image">
-                        <div class="overlay">
-                            <div class="content" [ngClass]="products[0].position">
-                                <h5>{{ products[0].brand }}</h5>
-                                <p class="view-more" [ngClass]="{'text-end': products[0].position !== 'center'}">View More</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="product-card">
-                        <img [src]="products[1].image" [alt]="products[1].name" class="product-image">
-                        <div class="overlay">
-                            <div class="content" [ngClass]="products[1].position">
-                                <h5>{{ products[1].brand }}</h5>
-                                <p class="view-more" [ngClass]="{'text-end': products[1].position !== 'center'}">View More</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <div class="product-card small-image">
-                                <img [src]="products[2].image" [alt]="products[2].name"
-                                    class="product-image">
-                                <div class="overlay">
-                                    <div class="content" [ngClass]="products[2].position">
-                                        <h5>{{ products[2].brand }}</h5>
-                                        <p class="view-more" [ngClass]="{'text-end': products[2].position !== 'center'}">View More</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="product-card small-image">
-                                <img [src]="products[3].image" [alt]="products[3].name"
-                                    class="product-image">
-                                <div class="overlay">
-                                    <div class="content" [ngClass]="products[3].position">
-                                        <h5>{{ products[3].brand }}</h5>
-                                        <p class="view-more" [ngClass]="{'text-end': products[3].position !== 'center'}">View More</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="product-card">
-                        <img [src]="products[4].image" [alt]="products[4].name" class="product-image">
-                        <div class="overlay">
-                            <div class="content" [ngClass]="products[4].position">
-                                <h5>{{ products[4].brand }}</h5>
-                                <p class="view-more" [ngClass]="{'text-end': products[4].position !== 'center'}">View More</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="product-card">
-                        <img [src]="products[5].image" [alt]="products[5].name" class="product-image">
-                        <div class="overlay">
-                            <div class="content" [ngClass]="products[5].position">
-                                <h5>{{ products[5].brand }}</h5>
-                                <p class="view-more" [ngClass]="{'text-end': products[5].position !== 'center'}">View More</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <div class="product-card small-image">
-                                <img [src]="products[6].image" [alt]="products[6].name"
-                                    class="product-image">
-                                <div class="overlay">
-                                    <div class="content" [ngClass]="products[6].position">
-                                        <h5>{{ products[6].brand }}</h5>
-                                        <p class="view-more" [ngClass]="{'text-end': products[6].position !== 'center'}">View More</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="product-card small-image">
-                                <img [src]="products[7].image" [alt]="products[7].name"
-                                    class="product-image">
-                                <div class="overlay">
-                                    <div class="content" [ngClass]="products[7].position">
-                                        <h5>{{ products[7].brand }}</h5>
-                                        <p class="view-more" [ngClass]="{'text-end': products[7].position !== 'center'}">View More</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="row d-none">
-    <div class="col-md-6" *ngFor="let column of [0, 1]; let colIndex = index">
+<div class="row" *ngFor="let groups of getProductGroups()">
+    <div class="col-md-6" *ngFor="let group of [groups.slice(0, 4), groups.slice(4, 8)]">
         <div class="row">
-            <div class="col-md-6" *ngFor="let row of [0, 1]; let rowIndex = index">
-                <div class="product-card">
-                    <img [src]="products[colIndex * 4 + rowIndex].image" 
-                         [alt]="products[colIndex * 4 + rowIndex].name" 
-                         class="product-image">
-                    <div class="overlay">
-                        <div class="content" [ngClass]="products[colIndex * 4 + rowIndex].position">
-                            <h5>{{ products[colIndex * 4 + rowIndex].brand }}</h5>
-                            <p class="view-more" [ngClass]="{'text-end': products[colIndex * 4 + rowIndex].position !== 'center'}">View More</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row" *ngIf="rowIndex === 1">
-                    <div class="col" *ngFor="let smallIndex of [0, 1]; let smallIdx = index">
-                        <div class="product-card small-image">
-                            <img [src]="products[colIndex * 4 + 2 + smallIdx].image" 
-                                 [alt]="products[colIndex * 4 + 2 + smallIdx].name" 
-                                 class="product-image">
-                            <div class="overlay">
-                                <div class="content" [ngClass]="products[colIndex * 4 + 2 + smallIdx].position">
-                                    <h5>{{ products[colIndex * 4 + 2 + smallIdx].brand }}</h5>
-                                    <p class="view-more" [ngClass]="{'text-end': products[colIndex * 4 + 2 + smallIdx].position !== 'center'}">View More</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> 
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<div class="row">
-    <div class="col-md-6" *ngFor="let group of getProductGroups()">
-        <div class="row">
-            <div class="col-md-6" *ngFor="let product of group.slice(0,2); let i = index">
+            <div class="col-md-6" *ngFor="let product of group.slice(0, 2); let i = index">
                 <div class="product-card">
                     <img [src]="product.image" [alt]="product.name" class="product-image">
                     <div class="overlay">
@@ -158,7 +13,7 @@
                 </div>
 
                 <div class="row" *ngIf="i === 1">
-                    <div class="col" *ngFor="let smallProduct of group.slice(2,4)">
+                    <div class="col" *ngFor="let smallProduct of group.slice(2, 4)">
                         <div class="product-card small-image">
                             <img [src]="smallProduct.image" [alt]="smallProduct.name" class="product-image">
                             <div class="overlay">
@@ -174,4 +29,3 @@
         </div>
     </div>
 </div>
-
