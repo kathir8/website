@@ -1,9 +1,9 @@
 <div class="category-menu">
   <div *ngFor="let category of categories" class="category-item dropdown me-md-2 me-lg-5" dropdown>
-    <div class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    <div class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
       {{ category.name }}
     </div>
-    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton" *ngIf="category.subcategories.length">
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
       <li *ngFor="let sub of category.subcategories"><a class="dropdown-item" href="#">{{ sub }}</a></li>
     </ul>
   </div>

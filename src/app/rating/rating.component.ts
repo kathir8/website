@@ -8,6 +8,6 @@ import { Component, Input } from '@angular/core';
   styleUrl: './rating.component.scss'
 })
 export class RatingComponent {
-  @Input()rating:string = '';
-  @Input()userCount:string = '';
+  @Input() rating: string = '';
+  @Input() userCount: string = '';
 }

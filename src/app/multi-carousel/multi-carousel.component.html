@@ -1,6 +1,11 @@
 <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
-        <app-top-brand-product-card *ngIf="isTopBrandSection" [carouselItems]="ProductsList"/>
-        <app-product-card *ngIf="!isTopBrandSection" [carouselItems]="ProductsList"/>
+        <div *ngFor="let group of getProductGroups(); let i = index" class="carousel-item" [class.active]="i === 0">
+            <div class="row">
+                <div *ngFor="let product of group" class="col col-md-6 col-lg-3">
+                    <app-product-card [product]="ecommerceService.getProductAllDetails(product)" />
+                </div>
+            </div>
+        </div>
     </div>
 </div>

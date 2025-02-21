@@ -1,11 +1,12 @@
 <main>
-    <app-header /> <app-banner />
+    <app-header /> 
+    <app-banner />
     <section>
         <app-top-categories />
         <app-product-layout [heading]="'Trending Products'" [ProductsList]="OtherProducts" />
         <app-product-layout [heading]="'offers on Top Brands'" [ProductsList]="TopBrandProducts"
             [isTopBrandSection]="true" />
-        <app-product-layout [heading]="'Best Selling items'" [ProductsList]="OtherProducts" />
+        <app-product-layout [heading]="'Best Selling items'" [ProductsList]="OtherProducts" [multiCarousel]="true" />
         <app-product-layout [heading]="'Browsing History'" [ProductsList]="OtherProducts" />
     </section>
     <app-footer />

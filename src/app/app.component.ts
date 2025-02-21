@@ -5,10 +5,12 @@ import { TopCategoriesComponent } from "./top-categories/top-categories.componen
 import { ProductLayoutComponent } from "./product-layout/product-layout.component";
 import { FooterComponent } from "./footer/footer.component";
 import { ProductAllDetails, ProductDetails } from './model/ecommerce';
+import { CardOuterComponent } from "./card-outer/card-outer.component";
+import { MultiCarouselComponent } from "./multi-carousel/multi-carousel.component";
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [HeaderComponent, BannerComponent, TopCategoriesComponent, ProductLayoutComponent, FooterComponent],
+  imports: [HeaderComponent, BannerComponent, TopCategoriesComponent, ProductLayoutComponent, FooterComponent, CardOuterComponent, MultiCarouselComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

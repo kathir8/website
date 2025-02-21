@@ -1,0 +1,11 @@
+.card-outer-layout {
+    overflow-x: auto;
+
+    .card-outer {
+        padding: 0 12px;
+    }
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}

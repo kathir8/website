@@ -1,0 +1,6 @@
+<div class="same-row card-outer-layout">
+    <div *ngFor="let product of ProductsList" class="card-outer">
+        <app-top-brand-product-card [product]="ecommerceService.getProductDetails(product)" *ngIf="isTopBrandSection"/>
+        <app-product-card [product]="ecommerceService.getProductAllDetails(product)" *ngIf="!isTopBrandSection"/>
+    </div>
+</div>

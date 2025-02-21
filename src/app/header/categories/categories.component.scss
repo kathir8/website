@@ -14,6 +14,7 @@
     align-items: center;
     cursor: pointer;
     border: 1px solid transparent;
+    position: relative;
 
     &:hover {
       background: var(--primary-color);
@@ -21,6 +22,10 @@
     }
 
     .dropdown-toggle {
+      padding: 0.375rem 0.75rem;
+      font-size: 1rem;
+      font-weight: 400;
+      border-radius: 0.375rem;
       border-color: transparent;
 
       &:hover {
@@ -31,6 +36,15 @@
         border: 0;
       }
     }
+
+    .dropdown-menu {
+      position: fixed !important;
+      top: 100%;
+      left: 0;
+      z-index: 1000;
+      min-width: 150px;
+      white-space: normal;
+    }
   }
 
   &::-webkit-scrollbar {
@@ -38,7 +52,7 @@
   }
 }
 
-@media (min-width: 500px) {
+@media (max-width: 1024px) {
   .category-menu {
     margin: 0.8em 1em 0 1em;
   }
