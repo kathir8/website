@@ -1,7 +1,7 @@
 <div class="category-menu">
-  <div *ngFor="let category of categories" class="category-item dropdown me-md-2 me-lg-5" dropdown>
+  <div *ngFor="let category of categories" class="category-item dropdown me-md-2 me-lg-5" appDropdownToggle>
     <div class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-      {{ category.name }}
+      {{ category.name }} <i class="bi-chevron-down ms-2"></i>
     </div>
     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
       <li *ngFor="let sub of category.subcategories"><a class="dropdown-item" href="#">{{ sub }}</a></li>

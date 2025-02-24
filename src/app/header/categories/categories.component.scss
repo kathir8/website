@@ -16,15 +16,10 @@
     border: 1px solid transparent;
     position: relative;
 
-    &:hover {
-      background: var(--primary-color);
-      color: #ffffff;
-    }
-
     .dropdown-toggle {
       padding: 0.375rem 0.75rem;
       font-size: 1rem;
-      font-weight: 400;
+      font-weight: 500;
       border-radius: 0.375rem;
       border-color: transparent;
 
@@ -34,6 +29,10 @@
 
       &.btn.show {
         border: 0;
+      }
+
+      &::after{
+        content:none;
       }
     }
 
@@ -45,6 +44,12 @@
       min-width: 150px;
       white-space: normal;
     }
+
+    &:hover {
+      background: var(--primary-color);
+      color: #ffffff;
+    }
+    
   }
 
   &::-webkit-scrollbar {

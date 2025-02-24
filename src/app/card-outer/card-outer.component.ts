@@ -3,7 +3,7 @@ import { ProductAllDetails, ProductDetails } from '../model/ecommerce';
 import { NgFor, NgIf } from '@angular/common';
 import { TopBrandProductCardComponent } from "../product-layout/top-brand-product-card/top-brand-product-card.component";
 import { ProductCardComponent } from '../product-layout/product-card/product-card.component';
-import { EcommerceService } from '../service/ecommerce.service';
+import { EcommerceService } from '../services/ecommerce.service';
 
 @Component({
   selector: 'app-card-outer',

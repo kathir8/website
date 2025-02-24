@@ -1,10 +1,11 @@
 import { NgFor } from '@angular/common';
 import { Component } from '@angular/core';
+import { DropdownToggleDirective } from '../../directives/dropdown-toggle.directive';
 
 @Component({
   selector: 'app-categories',
   standalone: true,
-  imports: [NgFor],
+  imports: [NgFor, DropdownToggleDirective],
   templateUrl: './categories.component.html',
   styleUrl: './categories.component.scss'
 })

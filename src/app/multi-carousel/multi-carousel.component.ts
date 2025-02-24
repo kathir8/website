@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { ProductCardComponent } from '../product-layout/product-card/product-card.component';
 import { NgFor } from '@angular/common';
 import { ProductAllDetails, ProductDetails } from '../model/ecommerce';
-import { EcommerceService } from '../service/ecommerce.service';
+import { EcommerceService } from '../services/ecommerce.service';
 
 @Component({
   selector: 'app-multi-carousel',
