@@ -1,5 +1,6 @@
 import { Directive, ElementRef, HostListener, Renderer2 } from '@angular/core';
 import { DrodpownStateService } from '../drodpown-state.service';
+import { Subscription } from 'rxjs';
 
 @Directive({
   selector: '[appDropdownToggle]',
@@ -7,9 +8,10 @@ import { DrodpownStateService } from '../drodpown-state.service';
 })
 export class DropdownToggleDirective {
   private isOpen = false;
+  private subscription: Subscription;
 
   constructor(private el: ElementRef, private renderer: Renderer2, private dropdownStateService: DrodpownStateService) {
-    this.dropdownStateService.activeDropdown$.subscribe((activeElement) => {
+    this.subscription = this.dropdownStateService.activeDropdown$.subscribe((activeElement) => {
       if (activeElement !== this.el.nativeElement) {
         this.isOpen = false;
         this.setIconState(false);
@@ -45,5 +47,8 @@ export class DropdownToggleDirective {
       this.renderer.removeClass(icon, isOpen ? 'bi-chevron-down' : 'bi-chevron-up');
       this.renderer.addClass(icon, isOpen ? 'bi-chevron-up' : 'bi-chevron-down');
     }
+  }
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
   }
 }

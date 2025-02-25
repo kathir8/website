@@ -12,7 +12,7 @@ import { TopCategoryProductDetails } from '../model/ecommerce';
 })
 export class TopCategoriesComponent {
   tabs = ['Health and Wellness', 'Home and Garden', 'Entertainment', 'Fashion'];
-  activeTab = 'Entertainment';
+  activeTab = 'Health and Wellness';
 
   products_Health: TopCategoryProductDetails[] = [
     { name: 'Product 1', brand: 'Bayer', image: 'images/top-categories/product1.png', position: 'right' },

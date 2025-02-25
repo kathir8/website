@@ -1,13 +1,15 @@
 .carousel {
-  .carousel-item{
+  .carousel-item {
     width: 100%;
     height: 771px;
+
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
-    .overlay{
+
+    .overlay {
       position: absolute;
       top: 0;
       left: 0;
@@ -16,33 +18,41 @@
       background: #00000036;
       z-index: 1;
     }
-    .carousel-caption{
+
+    .carousel-caption {
       opacity: 0;
-      transform: translateY(50px); /* Start position (move text from bottom) */
-      transition: opacity 1s ease-in-out, transform 0.75s ease-in-out;
       z-index: 2;
       width: 509px;
-      &.first{
-        top: 280px;
+      transition: opacity 1s ease-in-out;
+
+      &.first {
+        top: 275px;
+        left: 245px;
+        transform: translate(50%, 5%);
+        transition: opacity 0.5s ease-in;
       }
-      &.second{
+
+      &.second {
         top: 225px;
         left: 90px;
       }
-      &.center{
-        top: 235px;
-        left:calc(calc(100vw/2) - 200px);
+
+      &.center {
+        top: 255px;
+        left: calc(calc(100vw/2) - 200px);
       }
-     
-      h5{
+
+      h5 {
         font-weight: 700;
         font-size: 58px;
       }
-      p{
+
+      p {
         font-weight: 500;
         font-size: 20px;
       }
-      .btn{
+
+      .btn {
         width: 210px;
         height: 56px;
         font-size: 24px;
@@ -50,30 +60,44 @@
         color: #012B49;
       }
     }
+
     &.active .carousel-caption {
       opacity: 1;
-      transform: translateY(0); /* Move text to its original position */
-    }
-  }
 
-  .carousel-control-prev,
-  .carousel-control-next {
-    filter: invert(100%);
+      &.first {
+        animation: moveAndBounce 1s ease-in-out forwards;
+      }
+    }
   }
 }
 
 
 @media (max-width: 1000px) {
   .carousel {
-    img{
+    img {
       height: 500px;
     }
   }
 }
+
 @media (max-width: 500px) {
   .carousel {
-    img{
+    img {
       height: 250px;
     }
+  }
+}
+
+@keyframes moveAndBounce {
+  0% {
+    transform: translate(50%, 5%);
+  }
+
+  75% {
+    transform: translate(-5%, -2%);
+  }
+
+  100% {
+    transform: translate(0);
   }
 }

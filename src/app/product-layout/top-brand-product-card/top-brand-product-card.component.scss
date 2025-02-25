@@ -1,6 +1,6 @@
 .card {
     cursor: pointer;
-    width: 473.75px;
+    width: 400px;
     border-radius: 16px;
     height: 440px;
     padding: 7px;
@@ -8,7 +8,6 @@
 
     &-img {
         height: 330px;
-        object-fit: cover;
     }
 
     &-title {
