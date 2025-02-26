@@ -72,9 +72,9 @@
 }
 
 
-@media (max-width: 1000px) {
+@media (max-width: 1025px) {
   .carousel {
-    img {
+    .carousel-item {
       height: 500px;
     }
   }
@@ -82,7 +82,7 @@
 
 @media (max-width: 500px) {
   .carousel {
-    img {
+    .carousel-item {
       height: 250px;
     }
   }

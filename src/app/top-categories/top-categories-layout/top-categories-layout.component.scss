@@ -1,16 +1,26 @@
 .fixed-height {
-  height: 488px;
+  // height: 488px;
+  min-height: 59vh;
 
   .product-card {
-    position: relative;
-    overflow: hidden;
-    margin-bottom: 20px;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    // position: relative;
+    // overflow: hidden;
+    // margin-bottom: 20px;
     box-shadow: 0 4px 6px #0000001a;
     transition: transform 0.3s ease-in-out;
 
     &.image-size {
-      margin-bottom: 13px;
-      height: 200px;
+      // margin-bottom: 13px;
+      // height: 200px;
+      // height: auto;
+      // max-height: 33vh;
+      aspect-ratio: 4/2.5;
+
+      .product-image{
+        // aspect-ratio: 4/2.5;
+      }
     }
 
     &:hover {
@@ -19,7 +29,7 @@
 
     &.small-image {
       .product-image {
-        height: 275px;
+        height: 28vh;
       }
 
       h5 {
@@ -29,6 +39,8 @@
 
     .product-image {
       width: 100%;
+      height: auto; // Ensures images maintain aspect ratio
+      object-fit: cover;
     }
 
     .overlay {
