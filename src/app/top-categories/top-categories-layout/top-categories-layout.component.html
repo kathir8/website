@@ -1,4 +1,5 @@
-<div class="row fixed-height" [ngClass]="{'mt-4':j===1}" *ngFor="let groups of getProductGroups(); let j = index">
+<div class="row fixed-height d-none" [ngClass]="{'mt-4':j===1}"
+    *ngFor="let groups of getProductGroups(); let j = index">
     <div class="col-md-12 col-lg-6" *ngFor="let group of [groups.slice(0, 4), groups.slice(4, 8)]">
         <div class="row">
             <div class="col-md-6" *ngFor="let product of group.slice(0, 2); let i = index">
@@ -26,6 +27,20 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="parent">
+    <div class="product-card" [ngClass]="'div'+(i+1)" *ngFor="let product of products;let i = index">
+        <img class="grid-image" [src]="product.image" />
+        <div class="overlay d-none d-md-block">
+            <div class="content" [ngClass]="product.position">
+                <h5>{{ product.brand }}</h5>
+                <p class="view-more" [ngClass]="{'text-end': product.position !== 'center'}">View More</p>
             </div>
         </div>
     </div>

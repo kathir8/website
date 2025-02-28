@@ -1,7 +1,8 @@
 <div class="section-container bg-white">
     <div class="section-heading">{{heading}}</div>
     <div class="d-none d-sm-block">__Everyday listed new products from our trusted seller__</div>
-    <div class="btn btn-primary responsive-btn me-3 me-md-2 me-lg-5">Show all products</div>
+    <i class="bi bi-chevron-double-right icon me-3 d-md-none"></i>
+    <div class="btn btn-primary responsive-btn me-3 me-md-2 me-lg-5 d-none d-md-block">Show all products</div>
 </div>
 <app-card-outer *ngIf="!multiCarousel" [ProductsList]="ProductsList" [isTopBrandSection]="isTopBrandSection" />
 <app-multi-carousel *ngIf="multiCarousel" [isTopBrandSection]="isTopBrandSection" [ProductsList]="ProductsList" />

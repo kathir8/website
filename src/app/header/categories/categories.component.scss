@@ -45,11 +45,10 @@
       white-space: normal;
     }
 
-    &:hover {
+    &:hover,.dropdown-item:active {
       background: var(--primary-color);
       color: #ffffff;
     }
-    
   }
 
   &::-webkit-scrollbar {
